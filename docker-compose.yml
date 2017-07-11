@@ -1,0 +1,6 @@
+tweek-docs:
+  build: .
+  volumes:
+    - ./:/usr/src/app
+  ports:
+    - 5000:4000
