@@ -10,9 +10,7 @@ Tweek allow to define schema for identities and their properties using special t
 Usually, we'll want to add identities and properties for our domain, for example adding the property 'level' to identity 'user'
 can be suited for gaming domain.
 
-In order to do that, we can define new key:  
-`@tweek/context/user/level/type`  
-with the default value: number  
+In order to do that, we can do it using the editor "settings" page.
 
 This means we've just added a new property for our schema 'user.level' which use the type "number" (allow any json based number).    
 Types that allowed are as follows:
@@ -20,11 +18,6 @@ Types that allowed are as follows:
 - date type
 - external types defined under @tweek/custom/types/{typename}
 - custom
-
-If we are using custom, there should be another key
-at `@tweek/context/user/level/custom_type`, with value specifying the custom type. 
-for example:
-https://github.com/Soluto/tweek/tree/master/services/git-service/BareRepository/source/rules/%40tweek/context/device/device_os_type
 
 ### Custom types
 A custom type is a json value with the following properties:
