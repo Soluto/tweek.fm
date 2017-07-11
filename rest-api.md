@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Rest-Api
-permalink: /rest-api/
+permalink: /api/rest-api
 ---
 
 Tweek provides REST api for getting key values, and writing context properties.

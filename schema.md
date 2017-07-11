@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Identities, properties and schema
-permalink: /schema/
+permalink: /schema
 ---
 
 ## Identities, properties and schema

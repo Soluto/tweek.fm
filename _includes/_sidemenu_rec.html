@@ -1,0 +1,17 @@
+{% assign pages = site.pages | where_exp: 'page', 'page.title' | where_exp: 'page', 'page.url contains include.context' | group_by: 'dir' %}
+<ul>
+  {% for group in pages %}
+    {% if group.name != include.context %}
+      <div class="dir-item" >
+        <div class="dir-item-label {% if page.url contains group.name %}active{% endif %}" >{{ group.name | replace: '/', '' | capitalize }}</div>
+        {% include _sidemenu_rec.html context=group.name %}
+      </div>
+    {% else %}
+      {% for item in group.items %}
+        <div class="page-item">
+            <a href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
+        </div>
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+</ul>
