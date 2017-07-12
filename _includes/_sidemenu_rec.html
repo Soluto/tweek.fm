@@ -1,17 +1,25 @@
-{% assign pages = site.pages | where_exp: 'page', 'page.title' | where_exp: 'page', 'page.url contains include.context' | group_by: 'dir' %}
-<ul>
-  {% for group in pages %}
-    {% if group.name != include.context %}
-      <div class="dir-item" >
-        <div class="dir-item-label {% if page.url contains group.name %}active{% endif %}" >{{ group.name | replace: '/', '' | capitalize }}</div>
-        {% include _sidemenu_rec.html context=group.name %}
-      </div>
-    {% else %}
-      {% for item in group.items %}
-        <div class="page-item">
-            <a href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
-        </div>
-      {% endfor %}
-    {% endif %}
-  {% endfor %}
-</ul>
+{% assign first_page = include.pages | first %}
+{% if include.context == first_page.url %}
+  <div class="page-item">
+  {{first_page.title}}
+  </div>
+{% else %}
+  <div class="folder-container">
+  {% if include.context != "" %}
+  <div class="dir-item">{{include.context | remove_first: '/' | replace: "_", " "}}</div>
+  {% endif %}
+  {% capture prefix %}{{include.context}}/{% endcapture %}
+  {% assign filter = include.pages | where_exp: 'page', 'page.title' | where_exp: 'page', 'page.url contains prefix' | group_by_exp: 'page', "page.url | remove_first: prefix | split: '/'' | first"  %}
+  <ul>
+    {% for group in filter %}
+      {% capture nprefix %}{{include.context}}/{% endcapture %}
+      {% capture path %}{{nprefix}}{{group.name}}{% endcapture %}
+      
+      <li>{% include _sidemenu_rec.html context=path pages=group.items %}</li>
+      
+    {% endfor %}
+  </ul>
+  </div>
+{% endif %}
+
+

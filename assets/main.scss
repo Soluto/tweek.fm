@@ -10,6 +10,15 @@
 		border: none;
 		height: 70px;
 		min-height: 70px;
+		position: relative;
+		.logo{
+			    height: 70px;
+					width: 200px;
+					background-image: url(./logo.svg);
+					background-repeat: no-repeat;
+					background-position: center;
+					float: left;
+		}
 }
 
 body{
@@ -32,7 +41,14 @@ body{
 .side-menu{
 		min-width: 350px;
 		background-color:#414b53;
-	  .dir-item-label{
+		ul{
+			margin: 0;
+		}
+		ul li{
+			list-style: none;
+			padding-left: 10px;
+		}
+	  .dir-item{
 			font-size: 16px;
 			height: 30px;
 			padding-left: 5px;
@@ -40,6 +56,7 @@ body{
 			color: #d8d8d8;
 			background-color: transparent;
 			transition: all .2s ease-in-out;
+			font-size: 16px;
 		}
 	 .page-item{
 			display: block;	 
