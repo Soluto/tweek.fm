@@ -1,7 +1,7 @@
 {% assign first_page = include.pages | first %}
 {% if include.context == first_page.url %}
   <div class="page-item">
-  {{first_page.title}}
+  <a href="{{first_page.url}}">{{first_page.title}}</a>
   </div>
 {% else %}
   <div class="folder-container">
