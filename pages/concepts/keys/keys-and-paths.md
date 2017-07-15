@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Keys and paths
-permalink: /concepts/context/schema
+permalink: /concepts/kyes/keys-ands-paths
 ---
 
 ## Key paths
