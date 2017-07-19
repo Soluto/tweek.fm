@@ -4,7 +4,7 @@ title: Identities, properties and schema
 permalink: /concepts/context/schema
 ---
 
-## Identities, properties and schema
+## Schema
 
 Tweek allow to define schema for identities and their properties using special tweek keys.  
 Usually, we'll want to add identities and properties for our domain, for example adding the property 'level' to identity 'user'
