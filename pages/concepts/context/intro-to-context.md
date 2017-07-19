@@ -11,12 +11,12 @@ Context is evaluated against key's rules to retrieve the value, meaning:
 
 Context + key definition = value
 
-For example, assuming with a key is_allowed_to_drive with rule:  
+For example, assuming we have a key ```is_allowed_to_drive``` with rule:  
 
 ```default value: false```  
 ```User.Age > 18 then true```
 
-If we send a request to Tweek:  
+If we send these requests to Tweek:  
 ```
 GET http://api.dev.local.tweek.fm:81/api/v1/keys/is_allowed_to_drive -> false
 GET http://api.dev.local.tweek.fm:81/api/v1/keys/is_allowed_to_drive?User.Age=20 -> true
@@ -47,9 +47,9 @@ GET http://api.dev.local.tweek.fm:81/api/v1/keys/is_allowed_to_drive?User=john -
 
 You've noticed that we used "User.Age" and not simply "Age", the reason is that Tweek treat facts as properties on top of identities, for example:
 ```
-GET http://api.dev.local.tweek.fm:81/api/v1/keys/path/to/key?User=john?User.Country=england
+GET http://api.dev.local.tweek.fm:81/api/v1/keys/path/to/key?User=john&User.Country=england
 ```
-1. Tweek underestand that it need to get the values for identity user "john".
+1. Tweek understands that it need to get the values for identity user "john".
 2. Tweek look at inline context to see relevant properties for this identity, for example "User.Country=england"
 3. Tweek look at remote context to get all properties for identity user "john", from previous example it would be Age=20
 4. Tweek merge inline and remote context to a single context.
