@@ -32,4 +32,4 @@ A custom type is a json value with the following properties:
 
 
 When using external types, the json properties are defined as tweek keys.
-For example: https://github.com/Soluto/tweek/tree/master/services/git-service/BareRepository/source/rules/%40tweek/custom_types/version
+For example: [version - custom type](https://github.com/Soluto/tweek/blob/master/services/git-service/BareRepository/source/manifests/%40tweek/custom_types/version.json)
