@@ -1,0 +1,21 @@
+---
+layout: page
+title: First setup
+permalink: /getting started/first-setup
+---
+
+The easiest way to experience Tweek, is to setup a playground environment.  
+There are two ways to do it:
+- Create online playground environment - using PWT website
+- Create local playground environment - using docker-compose
+
+#### Online - Play With Tweek (experimental)
+
+
+#### Local - Run Locally using docker-compose
+```
+clone Tweek's repo (git clone https://github.com/Soluto/tweek.git)
+go to deployments/dev (cd tweek/deployments/dev)
+(optional) pull the images instead of building (docker-compose pull --parallel)
+run (docker-compose up) - this might take a few minutes the first time
+```
