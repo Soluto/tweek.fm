@@ -13,9 +13,7 @@ There are two ways to do it:
 
 
 #### Local - Run Locally using docker-compose
-```
-clone Tweek's repo (git clone https://github.com/Soluto/tweek.git)
-go to deployments/dev (cd tweek/deployments/dev)
-(optional) pull the images instead of building (docker-compose pull --parallel)
-run (docker-compose up) - this might take a few minutes the first time
-```
+- clone Tweek's repo (```git clone https://github.com/Soluto/tweek.git```)
+- go to deployments/dev (```cd tweek/deployments/dev```)
+- (optional) pull the images instead of building (```docker-compose pull --parallel```)
+- run (```docker-compose up```) - this might take a few minutes the first time
