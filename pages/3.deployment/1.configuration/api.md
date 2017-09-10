@@ -1,12 +1,12 @@
 ---
 layout: page
 title: Api's configuration
-permalink: /deployment/configuration/editor
+permalink: /deployment/configuration/api
 ---
 
-## Configuration for Tweek editor service
+## Configuration for Tweek api service
 
-Tweek's api service can be configured by setting environment variables or by mounting /app/appsettings.Production.json file.
+Tweek api service can be configured by setting environment variables or by mounting /app/appsettings.Production.json file.
 In the json format, keys are configured as nested objects:
 ```
 {
