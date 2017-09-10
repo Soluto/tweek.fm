@@ -1,10 +1,8 @@
 ---
 layout: page
-title: Api's configuration
+title: Api
 permalink: /deployment/configuration/api
 ---
-
-## Configuration for Tweek api service
 
 Tweek api service can be configured by setting environment variables or by mounting /app/appsettings.Production.json file.
 In the json format, keys are configured as nested objects:

@@ -1,10 +1,8 @@
 ---
 layout: page
-title: Editor's configuration
+title: Editor
 permalink: /deployment/configuration/editor
 ---
-
-## Configuration for Tweek editor service
 
 Tweek's editor can be configured by setting environment variables.
 
