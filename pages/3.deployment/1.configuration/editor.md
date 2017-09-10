@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Editor's configuration
-permalink: /configuration/editor
+permalink: /deployment/configuration/editor
 ---
 
 ## Configuration for Tweek editor service
@@ -37,5 +37,14 @@ For each auth scheme you need to add additional settings:
 ```AUTH_OAUTH2_CLIENT_SECRET```  
 ```AUTH_OAUTH2_CALLBACK_URL```  - usually https://tweekdomain/auth/oauth2/callback
 
+For example:
+TWEEK_AUTH_SCHEMES=azuread,google 
+AUTH_GOOGLE_CLIENT_ID=****************
+AUTH_GOOGLE_CLIENT_SECRET=*******************
+AUTH_GOOGLE_CALLBACK_URL=https://*********/auth/google/callback 
+AUTH_GOOGLE_HOSTED_DOMAIN=mydomain.com
+AUTH_AZUREAD_CLIENT_ID=***************
+AUTH_AZUREAD_CLIENT_SECRET=*************
+AUTH_AZUREAD_CALLBACK_URL=https://********/auth/openid/callback 
 
-
+So, in this setup, our users can choose either azure active directory login, or google login.
