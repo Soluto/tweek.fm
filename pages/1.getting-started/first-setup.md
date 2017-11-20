@@ -10,6 +10,8 @@ There are two ways to do it:
 - Create local playground environment - using docker-compose
 
 #### Online - Play With Tweek (experimental)
+- Go to https://play-with-tweek.com/
+- Follow the UI instructions to create new environment
 
 
 #### Local - Run Locally using docker-compose
